@@ -11,6 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -27,9 +28,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo/Brand */}
-        <Link href="/" className="group flex items-center gap-2">
-          <div className="flex size-9 items-center justify-center rounded-full bg-primary transition-transform duration-300 group-hover:scale-110 motion-reduce:transform-none">
-            <Sun className="size-5 text-primary-foreground transition-transform duration-500 group-hover:rotate-45 motion-reduce:transform-none" />
+        <Link href="/" className="flex items-center gap-2">
+          <div className="flex size-9 items-center justify-center rounded-full bg-primary">
+            <Sun className="size-5 text-primary-foreground" />
           </div>
           <span className="text-xl font-bold text-foreground">
             Sunshine <span className="text-primary">Rides</span>
@@ -42,7 +43,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="relative text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full motion-reduce:after:transition-none"
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
             >
               {link.label}
             </Link>
@@ -58,16 +59,18 @@ export function Header() {
             <Phone className="size-4" />
             <span>970-777-7777</span>
           </a>
+          <ThemeToggle />
           <Button asChild>
             <Link href="#book">Book a Ride</Link>
           </Button>
         </div>
 
         {/* Mobile Menu */}
-        <div className="flex items-center gap-1 md:hidden">
+        <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
           <a
             href="tel:970-777-7777"
-            className="flex size-11 items-center justify-center rounded-md text-foreground hover:bg-accent"
+            className="flex size-9 items-center justify-center rounded-md text-foreground hover:bg-accent"
           >
             <Phone className="size-5" />
             <span className="sr-only">Call 970-777-7777</span>
@@ -89,21 +92,21 @@ export function Header() {
                   </span>
                 </SheetTitle>
               </SheetHeader>
-              <nav className="mt-8 flex flex-col gap-1">
+              <nav className="mt-8 flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="flex min-h-[44px] items-center text-lg font-medium text-foreground transition-colors hover:text-primary"
+                    className="text-lg font-medium text-foreground transition-colors hover:text-primary"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <hr className="my-3" />
+                <hr className="my-2" />
                 <a
                   href="tel:970-777-7777"
-                  className="flex min-h-[44px] items-center gap-2 text-lg font-medium text-foreground"
+                  className="flex items-center gap-2 text-lg font-medium text-foreground"
                 >
                   <Phone className="size-5" />
                   <span>970-777-7777</span>
