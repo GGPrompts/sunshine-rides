@@ -145,14 +145,14 @@ export function Footer() {
             <p className="mb-4 text-sm text-secondary-foreground/80">
               Follow us on social media for updates and special offers.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-1">
               {socialLinks.map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-secondary-foreground/60 hover:text-primary transition-colors"
+                  className="flex size-11 items-center justify-center rounded-md text-secondary-foreground/60 hover:text-primary hover:bg-secondary-foreground/10 transition-colors"
                   aria-label={social.label}
                 >
                   {social.icon}

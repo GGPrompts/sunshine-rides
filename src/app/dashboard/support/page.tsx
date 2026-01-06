@@ -229,31 +229,53 @@ export default function SupportDashboard() {
             <CardTitle>Recent Tickets</CardTitle>
             <CardDescription>Latest customer support requests</CardDescription>
           </CardHeader>
-          <CardContent>
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-[100px]">Ticket ID</TableHead>
-                  <TableHead>Customer</TableHead>
-                  <TableHead>Subject</TableHead>
-                  <TableHead>Priority</TableHead>
-                  <TableHead>Status</TableHead>
-                  <TableHead className="text-right">Created</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {tickets.map((ticket) => (
-                  <TableRow key={ticket.id}>
-                    <TableCell className="font-mono text-sm">{ticket.id}</TableCell>
-                    <TableCell className="font-medium">{ticket.customer}</TableCell>
-                    <TableCell className="max-w-[300px] truncate">{ticket.subject}</TableCell>
-                    <TableCell>{getPriorityBadge(ticket.priority)}</TableCell>
-                    <TableCell>{getStatusBadge(ticket.status)}</TableCell>
-                    <TableCell className="text-right text-muted-foreground">{ticket.created}</TableCell>
+          <CardContent className="px-0 sm:px-6">
+            {/* Mobile Card View */}
+            <div className="space-y-3 px-4 sm:hidden">
+              {tickets.map((ticket) => (
+                <div key={ticket.id} className="rounded-lg border p-4 space-y-3">
+                  <div className="flex items-start justify-between gap-2">
+                    <div>
+                      <p className="font-mono text-sm text-muted-foreground">{ticket.id}</p>
+                      <p className="font-medium">{ticket.customer}</p>
+                    </div>
+                    <div className="flex flex-col items-end gap-1">
+                      {getPriorityBadge(ticket.priority)}
+                      {getStatusBadge(ticket.status)}
+                    </div>
+                  </div>
+                  <p className="text-sm">{ticket.subject}</p>
+                  <p className="text-xs text-muted-foreground">{ticket.created}</p>
+                </div>
+              ))}
+            </div>
+            {/* Desktop Table View */}
+            <div className="hidden sm:block overflow-x-auto">
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-[100px]">Ticket ID</TableHead>
+                    <TableHead>Customer</TableHead>
+                    <TableHead>Subject</TableHead>
+                    <TableHead>Priority</TableHead>
+                    <TableHead>Status</TableHead>
+                    <TableHead className="text-right">Created</TableHead>
                   </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+                </TableHeader>
+                <TableBody>
+                  {tickets.map((ticket) => (
+                    <TableRow key={ticket.id}>
+                      <TableCell className="font-mono text-sm">{ticket.id}</TableCell>
+                      <TableCell className="font-medium">{ticket.customer}</TableCell>
+                      <TableCell className="max-w-[300px] truncate">{ticket.subject}</TableCell>
+                      <TableCell>{getPriorityBadge(ticket.priority)}</TableCell>
+                      <TableCell>{getStatusBadge(ticket.status)}</TableCell>
+                      <TableCell className="text-right text-muted-foreground">{ticket.created}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
           </CardContent>
         </Card>
       </div>

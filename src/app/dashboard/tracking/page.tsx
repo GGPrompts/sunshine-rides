@@ -303,23 +303,53 @@ export default function RideTrackingPage() {
           <CardContent>
             <div className="divide-y">
               {recentRides.map((ride) => (
-                <div key={ride.id} className="flex items-center justify-between py-4 first:pt-0 last:pb-0">
-                  <div className="flex items-start gap-4">
-                    <div className="rounded-lg bg-muted p-2">
-                      <CarIcon className="size-5 text-muted-foreground" />
-                    </div>
-                    <div>
-                      <div className="flex items-center gap-2">
-                        <p className="font-medium">{ride.pickup}</p>
-                        <span className="text-muted-foreground">→</span>
-                        <p className="font-medium">{ride.dropoff}</p>
+                <div key={ride.id} className="py-4 first:pt-0 last:pb-0">
+                  {/* Mobile Layout */}
+                  <div className="flex flex-col gap-3 sm:hidden">
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex items-start gap-3">
+                        <div className="rounded-lg bg-muted p-2 shrink-0">
+                          <CarIcon className="size-5 text-muted-foreground" />
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-sm text-muted-foreground">{ride.date} • {ride.id}</p>
+                        </div>
                       </div>
-                      <p className="text-sm text-muted-foreground">{ride.date} • {ride.id}</p>
+                      <StatusBadge status={ride.status} />
+                    </div>
+                    <div className="space-y-1 pl-11">
+                      <div className="flex items-start gap-2">
+                        <div className="size-2 rounded-full bg-success mt-1.5 shrink-0" />
+                        <p className="text-sm font-medium truncate">{ride.pickup}</p>
+                      </div>
+                      <div className="flex items-start gap-2">
+                        <div className="size-2 rounded-full bg-primary mt-1.5 shrink-0" />
+                        <p className="text-sm font-medium truncate">{ride.dropoff}</p>
+                      </div>
+                    </div>
+                    <div className="flex justify-end">
+                      <span className="font-semibold">{ride.fare}</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
-                    <span className="font-semibold">{ride.fare}</span>
-                    <StatusBadge status={ride.status} />
+                  {/* Desktop Layout */}
+                  <div className="hidden sm:flex items-center justify-between">
+                    <div className="flex items-start gap-4">
+                      <div className="rounded-lg bg-muted p-2">
+                        <CarIcon className="size-5 text-muted-foreground" />
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2">
+                          <p className="font-medium">{ride.pickup}</p>
+                          <span className="text-muted-foreground">→</span>
+                          <p className="font-medium">{ride.dropoff}</p>
+                        </div>
+                        <p className="text-sm text-muted-foreground">{ride.date} • {ride.id}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <span className="font-semibold">{ride.fare}</span>
+                      <StatusBadge status={ride.status} />
+                    </div>
                   </div>
                 </div>
               ))}
