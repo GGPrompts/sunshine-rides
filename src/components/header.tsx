@@ -11,6 +11,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -58,6 +59,7 @@ export function Header() {
             <Phone className="size-4" />
             <span>970-777-7777</span>
           </a>
+          <ThemeToggle />
           <Button asChild>
             <Link href="#book">Book a Ride</Link>
           </Button>
@@ -65,6 +67,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         <div className="flex items-center gap-2 md:hidden">
+          <ThemeToggle />
           <a
             href="tel:970-777-7777"
             className="flex size-9 items-center justify-center rounded-md text-foreground hover:bg-accent"
