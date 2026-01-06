@@ -694,8 +694,8 @@ export default function FleetDashboard() {
           className="flex flex-col md:flex-row md:items-center md:justify-between gap-4"
         >
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Mountain Express Fleet
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground">
+              Mountain Express <span className="text-primary">Fleet</span>
             </h1>
             <p className="text-muted-foreground mt-2">
               Real-time vehicle tracking across Colorado&apos;s Western Slope
