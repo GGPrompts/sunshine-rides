@@ -6,11 +6,28 @@ This is a **fully automated demonstration** of Claude Code's parallel execution 
 
 ### What Makes This Impressive
 
-- **Massive Parallelization**: The conductor orchestrates 4-6+ parallel Claude workers simultaneously
+- **Massive Parallelization**: The conductor orchestrates 4-5 parallel Claude workers simultaneously
 - **Opus Subagents**: Each worker runs Claude Opus for maximum code quality
 - **Wave-Based Execution**: Issues organized into dependency waves for optimal parallel throughput
 - **Real Browser Automation**: TabzChrome spawns terminals and manages worker sessions
 - **Beads Issue Tracking**: All work tracked in real-time via the bd issue system
+
+---
+
+## Demo Kickoff Script
+
+When the user says something like:
+
+> "I want to build a professional website for a transportation company called Sunshine Rides. They're based in Colorado and need a modern SaaS-style landing page with dashboards. Use the most modern tech stack possible - Next.js, Tailwind, shadcn. Make it production-ready."
+
+**Claude should respond by:**
+
+1. Acknowledging the request and checking `bd ready` to see the pre-planned backlog
+2. Briefly explaining the wave-based parallel execution strategy
+3. Asking if they want to review/adjust the backlog first (`/conductor:plan-backlog`) or dive straight in
+4. Launching `/conductor:bd-swarm-auto` to begin autonomous parallel execution
+
+This creates a natural conversation flow where the user's request triggers the orchestrated build, rather than just running a slash command cold.
 
 ---
 
@@ -49,7 +66,7 @@ This is a **fully automated demonstration** of Claude Code's parallel execution 
 | SAAS-9pc | Design system - Sunshine Rides brand colors | 10 issues |
 | SAAS-blt | Layout shell - RootLayout with providers | 10 issues |
 
-### Wave 2 - UI Components (10 parallel workers possible!)
+### Wave 2 - UI Components (batched across 2-3 rounds)
 | ID | Title | Type |
 |----|-------|------|
 | SAAS-irm | Header - Sunshine Rides navigation | ui |
