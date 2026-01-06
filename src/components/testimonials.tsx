@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
+import { AnimatedSection, AnimatedItem } from "@/components/animated-section";
 
 interface Testimonial {
   quote: string;
@@ -63,7 +66,7 @@ export function Testimonials() {
   return (
     <section className="bg-muted/50 py-20 md:py-28">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="mx-auto max-w-2xl text-center">
+        <AnimatedSection className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
             What Our Riders Say
           </h2>
@@ -71,36 +74,35 @@ export function Testimonials() {
             Trusted by families across Colorado for reliable, compassionate
             transportation.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              className="flex flex-col justify-between transition-shadow hover:shadow-md"
-            >
-              <CardContent className="pt-6">
-                <StarRating rating={testimonial.rating} />
-                <blockquote className="mt-4 text-sm leading-relaxed text-foreground/90">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </blockquote>
-              </CardContent>
-              <div className="flex items-center gap-3 border-t px-6 py-4">
-                <Image
-                  src="/images/driver.png"
-                  alt={`${testimonial.name} avatar`}
-                  width={40}
-                  height={40}
-                  className="rounded-full object-cover"
-                />
-                <div>
-                  <p className="text-sm font-semibold">{testimonial.name}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {testimonial.location}
-                  </p>
+            <AnimatedItem key={index} index={index} staggerDelay={100}>
+              <Card className="flex flex-col justify-between h-full">
+                <CardContent className="pt-6">
+                  <StarRating rating={testimonial.rating} />
+                  <blockquote className="mt-4 text-sm leading-relaxed text-foreground/90">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </blockquote>
+                </CardContent>
+                <div className="flex items-center gap-3 border-t px-6 py-4">
+                  <Image
+                    src="/images/driver.png"
+                    alt={`${testimonial.name} avatar`}
+                    width={40}
+                    height={40}
+                    className="rounded-full object-cover transition-transform duration-300 hover:scale-110 motion-reduce:transform-none"
+                  />
+                  <div>
+                    <p className="text-sm font-semibold">{testimonial.name}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {testimonial.location}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </AnimatedItem>
           ))}
         </div>
       </div>

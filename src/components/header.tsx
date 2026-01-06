@@ -27,9 +27,9 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo/Brand */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="flex size-9 items-center justify-center rounded-full bg-primary">
-            <Sun className="size-5 text-primary-foreground" />
+        <Link href="/" className="group flex items-center gap-2">
+          <div className="flex size-9 items-center justify-center rounded-full bg-primary transition-transform duration-300 group-hover:scale-110 motion-reduce:transform-none">
+            <Sun className="size-5 text-primary-foreground transition-transform duration-500 group-hover:rotate-45 motion-reduce:transform-none" />
           </div>
           <span className="text-xl font-bold text-foreground">
             Sunshine <span className="text-primary">Rides</span>
@@ -42,7 +42,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+              className="relative text-sm font-medium text-muted-foreground transition-colors duration-200 hover:text-primary after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full motion-reduce:after:transition-none"
             >
               {link.label}
             </Link>

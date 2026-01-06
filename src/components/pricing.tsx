@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import {
@@ -9,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { cn } from "@/lib/utils"
+import { AnimatedSection, AnimatedItem } from "@/components/animated-section"
 
 interface PricingTier {
   name: string
@@ -149,7 +152,7 @@ export function Pricing() {
   return (
     <section id="pricing" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="mx-auto max-w-3xl text-center">
+        <AnimatedSection className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             Simple, Transparent Pricing
           </h2>
@@ -157,23 +160,25 @@ export function Pricing() {
             From quick local trips to long-distance travel, we have a ride for
             every need. No hidden fees, just reliable service.
           </p>
-        </div>
+        </AnimatedSection>
         <div className="mx-auto mt-12 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {pricingTiers.map((tier) => (
-            <PricingCard key={tier.name} tier={tier} />
+          {pricingTiers.map((tier, index) => (
+            <AnimatedItem key={tier.name} index={index} staggerDelay={100}>
+              <PricingCard tier={tier} />
+            </AnimatedItem>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <AnimatedSection className="mt-12 text-center" delay={500}>
           <p className="text-muted-foreground">
             Need something custom?{" "}
             <a
               href="tel:970-777-7777"
-              className="font-medium text-primary hover:underline"
+              className="font-medium text-primary hover:underline transition-colors"
             >
               Call us at 970-777-7777
             </a>
           </p>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   )
