@@ -11,9 +11,15 @@ const serviceAreas = [
 
 const quickLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Fleet", href: "/fleet" },
-  { label: "Contact", href: "/contact" },
+  { label: "Services", href: "#features" },
+  { label: "Pricing", href: "#pricing" },
+  { label: "Reviews", href: "#testimonials" },
+];
+
+const dashboardLinks = [
+  { label: "Fleet Dashboard", href: "/dashboard/fleet" },
+  { label: "Ride Tracking", href: "/dashboard/tracking" },
+  { label: "Support", href: "/dashboard/support" },
 ];
 
 const socialLinks = [
@@ -125,6 +131,21 @@ export function Footer() {
             </h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-sm text-secondary-foreground/80 hover:text-secondary-foreground transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <h3 className="mb-4 mt-6 text-sm font-semibold uppercase tracking-wider text-primary">
+              Dashboards
+            </h3>
+            <ul className="space-y-2">
+              {dashboardLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
