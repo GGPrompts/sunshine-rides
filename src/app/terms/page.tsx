@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms of Service for Sunshine Rides of Colorado transportation services.",
+  description: "Terms of Service for Mountain Express of Colorado transportation services.",
 };
 
 export default function TermsPage() {
@@ -21,7 +21,7 @@ export default function TermsPage() {
 
         <div className="prose prose-neutral dark:prose-invert max-w-none">
           <p className="lead text-lg text-muted-foreground mb-8">
-            Welcome to Sunshine Rides of Colorado. By using our transportation services,
+            Welcome to Mountain Express of Colorado. By using our transportation services,
             you agree to these Terms of Service. Please read them carefully.
           </p>
 
@@ -30,7 +30,7 @@ export default function TermsPage() {
               1. Service Description
             </h2>
             <p className="text-muted-foreground mb-4">
-              Sunshine Rides of Colorado provides non-emergency transportation services
+              Mountain Express of Colorado provides non-emergency transportation services
               throughout Colorado, including but not limited to:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
@@ -51,7 +51,7 @@ export default function TermsPage() {
               2. Booking and Reservations
             </h2>
             <p className="text-muted-foreground mb-4">
-              Reservations can be made by calling 970-777-7777 or through our online
+              Reservations can be made by calling 970-555-0199 or through our online
               booking system. When booking a ride, you agree to:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
@@ -124,7 +124,7 @@ export default function TermsPage() {
               5. Liability Limitations
             </h2>
             <p className="text-muted-foreground mb-4">
-              Sunshine Rides of Colorado maintains comprehensive insurance coverage
+              Mountain Express of Colorado maintains comprehensive insurance coverage
               for all vehicles and passengers. However:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
@@ -211,7 +211,7 @@ export default function TermsPage() {
               8. Service Modifications
             </h2>
             <p className="text-muted-foreground mb-4">
-              Sunshine Rides reserves the right to:
+              Mountain Express reserves the right to:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-2 mb-4">
               <li>
@@ -271,16 +271,16 @@ export default function TermsPage() {
               services, please contact us:
             </p>
             <address className="not-italic text-muted-foreground">
-              <strong className="text-foreground">Sunshine Rides of Colorado</strong>
+              <strong className="text-foreground">Mountain Express of Colorado</strong>
               <br />
               Phone:{" "}
-              <a href="tel:970-777-7777" className="text-primary hover:underline">
-                970-777-7777
+              <a href="tel:970-555-0199" className="text-primary hover:underline">
+                970-555-0199
               </a>
               <br />
               Email:{" "}
-              <a href="mailto:info@sunshinerides.com" className="text-primary hover:underline">
-                info@sunshinerides.com
+              <a href="mailto:info@mountainexpress.example.com" className="text-primary hover:underline">
+                info@mountainexpress.example.com
               </a>
             </address>
           </section>
@@ -288,7 +288,7 @@ export default function TermsPage() {
           <hr className="border-border my-10" />
 
           <p className="text-sm text-muted-foreground">
-            By using Sunshine Rides services, you acknowledge that you have read,
+            By using Mountain Express services, you acknowledge that you have read,
             understood, and agree to be bound by these Terms of Service.
           </p>
         </div>

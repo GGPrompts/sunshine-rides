@@ -55,7 +55,7 @@ export function Features() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Why Choose Sunshine Rides?
+            Why Choose Mountain Express?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Colorado's trusted transportation partner. Professional service,

@@ -39,7 +39,7 @@ export function Header() {
             <Sun className="size-5 text-primary-foreground" />
           </div>
           <span className="text-xl font-bold text-foreground">
-            Sunshine <span className="text-primary">Rides</span>
+            Mountain <span className="text-primary">Express</span>
           </span>
         </Link>
 
@@ -69,11 +69,11 @@ export function Header() {
         {/* Desktop CTA */}
         <div className="hidden items-center gap-4 md:flex">
           <a
-            href="tel:970-777-7777"
+            href="tel:970-555-0199"
             className="flex items-center gap-2 text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             <Phone className="size-4" />
-            <span>970-777-7777</span>
+            <span>970-555-0199</span>
           </a>
           <ThemeToggle />
           <Button asChild>
@@ -85,11 +85,11 @@ export function Header() {
         <div className="flex items-center gap-2 md:hidden">
           <ThemeToggle />
           <a
-            href="tel:970-777-7777"
+            href="tel:970-555-0199"
             className="flex size-9 items-center justify-center rounded-md text-foreground hover:bg-accent"
           >
             <Phone className="size-5" />
-            <span className="sr-only">Call 970-777-7777</span>
+            <span className="sr-only">Call 970-555-0199</span>
           </a>
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
@@ -104,7 +104,7 @@ export function Header() {
                     <Sun className="size-4 text-primary-foreground" />
                   </div>
                   <span>
-                    Sunshine <span className="text-primary">Rides</span>
+                    Mountain <span className="text-primary">Express</span>
                   </span>
                 </SheetTitle>
               </SheetHeader>
@@ -135,11 +135,11 @@ export function Header() {
                 ))}
                 <div className="my-3 border-t" />
                 <a
-                  href="tel:970-777-7777"
+                  href="tel:970-555-0199"
                   className="-mx-2 flex items-center gap-3 rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-accent"
                 >
                   <Phone className="size-5 text-primary" />
-                  <span>970-777-7777</span>
+                  <span>970-555-0199</span>
                 </a>
                 <Button asChild className="mt-4 w-full" size="lg">
                   <Link href="/contact" onClick={() => setIsOpen(false)}>

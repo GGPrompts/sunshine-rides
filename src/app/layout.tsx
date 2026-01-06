@@ -14,29 +14,29 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://sunshinerides.com";
+const siteUrl = "https://mountainexpress.example.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Sunshine Rides | Your Ride, Your Way",
-    template: "%s | Sunshine Rides",
+    default: "Mountain Express | Your Journey, Our Priority",
+    template: "%s | Mountain Express",
   },
-  description: "Reliable transportation services in Colorado. Wheelchair accessible, medical transport, Medicaid accepted. Serving Grand Junction, Montrose, Telluride, Vail, Denver, and Aspen. Our car is your car.",
+  description: "Reliable transportation services in Colorado. Wheelchair accessible, medical transport, Medicaid accepted. Serving Grand Junction, Montrose, Telluride, Vail, Denver, and Aspen. Your journey, our priority.",
   keywords: ["transportation", "rides", "Colorado", "wheelchair accessible", "medical transport", "Medicaid", "Grand Junction", "Montrose", "Telluride", "Vail", "Denver", "Aspen", "NEMT", "non-emergency medical transport"],
-  authors: [{ name: "Sunshine Rides of Colorado" }],
-  creator: "Sunshine Rides of Colorado",
-  publisher: "Sunshine Rides of Colorado",
+  authors: [{ name: "Mountain Express of Colorado" }],
+  creator: "Mountain Express of Colorado",
+  publisher: "Mountain Express of Colorado",
   formatDetection: {
     telephone: true,
     email: true,
     address: true,
   },
   openGraph: {
-    title: "Sunshine Rides | Your Ride, Your Way",
-    description: "Reliable transportation services in Colorado. Wheelchair accessible, medical transport, Medicaid accepted. Our car is your car.",
+    title: "Mountain Express | Your Journey, Our Priority",
+    description: "Reliable transportation services in Colorado. Wheelchair accessible, medical transport, Medicaid accepted. Your journey, our priority.",
     url: siteUrl,
-    siteName: "Sunshine Rides",
+    siteName: "Mountain Express",
     locale: "en_US",
     type: "website",
     images: [
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
         url: "/images/hero.png",
         width: 1200,
         height: 630,
-        alt: "Sunshine Rides - Colorado Transportation Services",
+        alt: "Mountain Express - Colorado Transportation Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sunshine Rides | Your Ride, Your Way",
+    title: "Mountain Express | Your Journey, Our Priority",
     description: "Reliable transportation services in Colorado. Wheelchair accessible, medical transport, Medicaid accepted.",
     images: ["/images/hero.png"],
   },
@@ -80,11 +80,11 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "@id": `${siteUrl}/#organization`,
-  name: "Sunshine Rides",
+  name: "Mountain Express",
   description: "Reliable transportation services in Colorado. Wheelchair accessible, medical transport, and Medicaid accepted.",
   url: siteUrl,
-  telephone: "+1-970-777-7777",
-  email: "info@sunshinerides.com",
+  telephone: "+1-970-555-0199",
+  email: "info@mountainexpress.example.com",
   image: `${siteUrl}/images/hero.png`,
   logo: `${siteUrl}/images/hero.png`,
   priceRange: "$$",

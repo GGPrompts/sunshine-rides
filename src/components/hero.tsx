@@ -66,7 +66,7 @@ export function Hero() {
               className="text-base font-semibold px-8 py-6 bg-white/10 border-white/30 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm"
             >
               <Phone className="mr-2 size-5" />
-              970-777-7777
+              970-555-0199
             </Button>
           </div>
 

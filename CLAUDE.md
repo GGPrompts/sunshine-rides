@@ -195,13 +195,13 @@ bd list     # See all issues
 
 ---
 
-## Brand: Sunshine Rides
+## Brand: Mountain Express
 
 - **Business**: Transportation service in Colorado
-- **Tagline**: "Our Car is Your Car"
+- **Tagline**: "Your Journey, Our Priority"
 - **Colors**: Orange primary, warm earth tones
 - **Service Areas**: Grand Junction, Montrose, Telluride, Vail, Denver, Aspen
-- **Phone**: 970-777-7777
+- **Phone**: 970-555-0199
 - **Features**: Wheelchair accessible, medical transport, Medicaid accepted
 
 ---

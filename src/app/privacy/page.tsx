@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Sunshine Rides of Colorado. Learn how we collect, use, and protect your personal information.",
+    "Privacy Policy for Mountain Express of Colorado. Learn how we collect, use, and protect your personal information.",
 };
 
 export default function PrivacyPage() {
@@ -17,7 +17,7 @@ export default function PrivacyPage() {
               Privacy Policy
             </h1>
             <p className="text-muted-foreground">
-              Sunshine Rides of Colorado
+              Mountain Express of Colorado
             </p>
           </div>
         </div>
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed">
-              At Sunshine Rides of Colorado, we are committed to protecting your
+              At Mountain Express of Colorado, we are committed to protecting your
               privacy and ensuring the security of your personal information.
               This Privacy Policy explains how we collect, use, disclose, and
               safeguard your information when you use our transportation
@@ -240,24 +240,24 @@ export default function PrivacyPage() {
                 </p>
                 <div className="bg-muted/50 rounded-lg p-6">
                   <p className="font-semibold text-foreground mb-2">
-                    Sunshine Rides of Colorado
+                    Mountain Express of Colorado
                   </p>
                   <p className="text-muted-foreground mb-1">
                     Phone:{" "}
                     <a
-                      href="tel:970-777-7777"
+                      href="tel:970-555-0199"
                       className="text-primary hover:underline"
                     >
-                      970-777-7777
+                      970-555-0199
                     </a>
                   </p>
                   <p className="text-muted-foreground">
                     Email:{" "}
                     <a
-                      href="mailto:privacy@sunshinerides.com"
+                      href="mailto:privacy@mountainexpress.example.com"
                       className="text-primary hover:underline"
                     >
-                      privacy@sunshinerides.com
+                      privacy@mountainexpress.example.com
                     </a>
                   </p>
                 </div>
@@ -265,7 +265,7 @@ export default function PrivacyPage() {
             </div>
 
             <p className="text-sm text-muted-foreground pt-8 border-t">
-              By using Sunshine Rides services, you acknowledge that you have
+              By using Mountain Express services, you acknowledge that you have
               read and understood this Privacy Policy.
             </p>
           </article>

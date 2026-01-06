@@ -159,14 +159,14 @@ export default function ServicesPage() {
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
               From local errands to mountain adventures, medical appointments to
-              airport transfers—Sunshine Rides provides safe, reliable
+              airport transfers—Mountain Express provides safe, reliable
               transportation across Colorado.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" asChild>
-                <a href="tel:970-777-7777" className="gap-2">
+                <a href="tel:970-555-0199" className="gap-2">
                   <Phone className="size-5" />
-                  Call 970-777-7777
+                  Call 970-555-0199
                 </a>
               </Button>
               <Button size="lg" variant="outline" asChild>
@@ -283,7 +283,7 @@ export default function ServicesPage() {
                   </CardContent>
                   <CardFooter>
                     <Button className="w-full gap-2" asChild>
-                      <a href="tel:970-777-7777">
+                      <a href="tel:970-555-0199">
                         <Phone className="size-4" />
                         Book This Service
                       </a>
@@ -301,7 +301,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Why Choose Sunshine Rides?
+              Why Choose Mountain Express?
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Colorado's trusted transportation partner since day one.
@@ -346,9 +346,9 @@ export default function ServicesPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Button size="lg" className="text-lg px-8 gap-2" asChild>
-                    <a href="tel:970-777-7777">
+                    <a href="tel:970-555-0199">
                       <Phone className="size-5" />
-                      970-777-7777
+                      970-555-0199
                     </a>
                   </Button>
                   <Button size="lg" variant="outline" asChild>
@@ -359,7 +359,7 @@ export default function ServicesPage() {
                   </Button>
                 </div>
                 <p className="mt-6 text-sm text-muted-foreground">
-                  <span className="font-medium">Our Car is Your Car</span> •
+                  <span className="font-medium">Your Journey, Our Priority</span> •
                   Serving all of Colorado
                 </p>
               </CardContent>
@@ -378,10 +378,10 @@ export default function ServicesPage() {
                 Transportation benefits vary by plan. Contact your Medicaid
                 provider or call us at{" "}
                 <a
-                  href="tel:970-777-7777"
+                  href="tel:970-555-0199"
                   className="text-primary hover:underline"
                 >
-                  970-777-7777
+                  970-555-0199
                 </a>{" "}
                 to verify your eligibility for covered medical transportation.
               </p>

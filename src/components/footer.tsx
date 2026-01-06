@@ -83,11 +83,11 @@ export function Footer() {
                   <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
                 </svg>
               </div>
-              <span className="text-xl font-bold">Sunshine Rides</span>
+              <span className="text-xl font-bold">Mountain Express</span>
             </div>
             <p className="text-sm text-secondary-foreground/80">
-              Sunshine Rides of Colorado - Your trusted transportation partner.
-              Our car is your car.
+              Mountain Express of Colorado - Your trusted transportation partner.
+              Your journey, our priority.
             </p>
             <div className="flex items-center gap-2">
               <svg
@@ -100,10 +100,10 @@ export function Footer() {
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
               </svg>
               <a
-                href="tel:970-777-7777"
+                href="tel:970-555-0199"
                 className="text-lg font-semibold text-primary hover:text-primary/80 transition-colors"
               >
-                970-777-7777
+                970-555-0199
               </a>
             </div>
           </div>
@@ -187,7 +187,7 @@ export function Footer() {
         <div className="mt-12 border-t border-secondary-foreground/10 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-secondary-foreground/60">
-              &copy; {currentYear} Sunshine Rides of Colorado. All rights reserved.
+              &copy; {currentYear} Mountain Express of Colorado. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link

@@ -14,29 +14,29 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Sunshine Rides has been a lifesaver for getting my mother to her medical appointments. The drivers are always on time, patient, and treat her with such respect. We couldn't ask for better service.",
-    name: "Maria Gonzalez",
+      "Mountain Express has been a lifesaver for getting my mother to her medical appointments. The drivers are always on time, patient, and treat her with such respect. We couldn't ask for better service.",
+    name: "Linda M.",
     location: "Grand Junction, CO",
     rating: 5,
   },
   {
     quote:
-      "I rely on Sunshine Rides for my weekly dialysis treatments. Rain or shine, they're always there. The wheelchair accessibility is seamless, and the drivers know exactly how to help without making me feel like a burden.",
-    name: "Robert Chen",
+      "I rely on Mountain Express for my weekly dialysis treatments. Rain or shine, they're always there. The wheelchair accessibility is seamless, and the drivers know exactly how to help without making me feel like a burden.",
+    name: "Tom R.",
     location: "Montrose, CO",
     rating: 5,
   },
   {
     quote:
-      "After my car broke down, I thought I'd have to miss work. Sunshine Rides got me there and back every day for two weeks. Their reliability literally saved my job. Can't recommend them enough!",
-    name: "Jennifer Williams",
+      "After my car broke down, I thought I'd have to miss work. Mountain Express got me there and back every day for two weeks. Their reliability literally saved my job. Can't recommend them enough!",
+    name: "Sarah K.",
     location: "Telluride, CO",
     rating: 5,
   },
   {
     quote:
-      "The peace of mind knowing my elderly father has safe, dependable transportation is priceless. The Sunshine Rides team treats him like family. They even remember his favorite radio station!",
-    name: "Michael Torres",
+      "The peace of mind knowing my elderly father has safe, dependable transportation is priceless. The Mountain Express team treats him like family. They even remember his favorite radio station!",
+    name: "David P.",
     location: "Denver, CO",
     rating: 5,
   },

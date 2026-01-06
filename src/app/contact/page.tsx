@@ -81,13 +81,13 @@ export default function ContactPage() {
             </Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               Contact{" "}
-              <span className="text-primary">Sunshine Rides</span>
+              <span className="text-primary">Mountain Express</span>
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground mb-4 max-w-2xl mx-auto leading-relaxed">
-              Sunshine Rides of Colorado - Your trusted transportation partner.
+              Mountain Express of Colorado - Your trusted transportation partner.
             </p>
             <p className="text-xl sm:text-2xl text-foreground font-medium mb-8">
-              &ldquo;Our Car is Your Car&rdquo;
+              &ldquo;Your Journey, Our Priority&rdquo;
             </p>
 
             {/* Prominent Phone CTA */}
@@ -97,9 +97,9 @@ export default function ContactPage() {
                 className="text-xl sm:text-2xl px-10 py-8 font-bold gap-3 shadow-lg hover:shadow-xl transition-shadow"
                 asChild
               >
-                <a href="tel:970-777-7777">
+                <a href="tel:970-555-0199">
                   <Phone className="size-7" />
-                  970-777-7777
+                  970-555-0199
                 </a>
               </Button>
               <p className="text-muted-foreground">
@@ -115,20 +115,20 @@ export default function ContactPage() {
                 <Phone className="size-6 text-primary mx-auto mb-2" />
                 <div className="font-semibold text-foreground">Call Us</div>
                 <a
-                  href="tel:970-777-7777"
+                  href="tel:970-555-0199"
                   className="text-primary hover:underline"
                 >
-                  970-777-7777
+                  970-555-0199
                 </a>
               </div>
               <div className="text-center p-4 rounded-lg bg-card border">
                 <Mail className="size-6 text-primary mx-auto mb-2" />
                 <div className="font-semibold text-foreground">Email Us</div>
                 <a
-                  href="mailto:rides@sunshinerides.co"
+                  href="mailto:info@mountainexpress.example.com"
                   className="text-primary hover:underline"
                 >
-                  rides@sunshinerides.co
+                  info@mountainexpress.example.com
                 </a>
               </div>
               <div className="text-center p-4 rounded-lg bg-card border">
@@ -165,7 +165,7 @@ export default function ContactPage() {
                         Message Sent!
                       </h3>
                       <p className="text-muted-foreground mb-6">
-                        Thank you for contacting Sunshine Rides. We&apos;ll be
+                        Thank you for contacting Mountain Express. We&apos;ll be
                         in touch shortly.
                       </p>
                       <Button
@@ -341,9 +341,9 @@ export default function ContactPage() {
                       Our friendly team is ready to help you book your ride.
                     </p>
                     <Button size="lg" className="gap-2" asChild>
-                      <a href="tel:970-777-7777">
+                      <a href="tel:970-555-0199">
                         <Phone className="size-5" />
-                        970-777-7777
+                        970-555-0199
                       </a>
                     </Button>
                   </CardContent>
@@ -362,7 +362,7 @@ export default function ContactPage() {
               Serving All of Colorado
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              From the Western Slope to the Front Range, Sunshine Rides provides
+              From the Western Slope to the Front Range, Mountain Express provides
               reliable transportation throughout the Centennial State.
             </p>
           </AnimatedSection>
@@ -398,14 +398,14 @@ export default function ContactPage() {
                 Ready to Book Your Ride?
               </h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Call us today or fill out the form above. Sunshine Rides of
+                Call us today or fill out the form above. Mountain Express of
                 Colorado is here to serve you.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button size="lg" className="gap-2 px-8" asChild>
-                  <a href="tel:970-777-7777">
+                  <a href="tel:970-555-0199">
                     <Phone className="size-5" />
-                    970-777-7777
+                    970-555-0199
                   </a>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
@@ -413,7 +413,7 @@ export default function ContactPage() {
                 </Button>
               </div>
               <p className="mt-6 text-sm text-muted-foreground">
-                <span className="font-medium">Our Car is Your Car</span> •
+                <span className="font-medium">Your Journey, Our Priority</span> •
                 Serving Colorado since day one
               </p>
             </div>

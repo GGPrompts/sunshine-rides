@@ -172,10 +172,10 @@ export function Pricing() {
           <p className="text-muted-foreground">
             Need something custom?{" "}
             <a
-              href="tel:970-777-7777"
+              href="tel:970-555-0199"
               className="font-medium text-primary hover:underline transition-colors"
             >
-              Call us at 970-777-7777
+              Call us at 970-555-0199
             </a>
           </p>
         </AnimatedSection>

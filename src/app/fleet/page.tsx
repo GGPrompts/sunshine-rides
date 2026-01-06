@@ -136,11 +136,11 @@ interface FuelRecord {
 }
 
 export default function FleetDashboard() {
-  // Drivers - Diverse names for Sunshine Rides Colorado
+  // Drivers - Mountain Express Colorado
   const [drivers] = useState<Driver[]>([
     {
       id: "driver-1",
-      name: "Maria Garcia",
+      name: "Alex M.",
       phone: "(970) 555-1234",
       license: "CDL-B",
       status: "on-trip",
@@ -150,7 +150,7 @@ export default function FleetDashboard() {
     },
     {
       id: "driver-2",
-      name: "James Wilson",
+      name: "Jordan W.",
       phone: "(970) 555-2345",
       license: "CDL-B",
       status: "on-trip",
@@ -160,7 +160,7 @@ export default function FleetDashboard() {
     },
     {
       id: "driver-3",
-      name: "Sarah Chen",
+      name: "Sam C.",
       phone: "(970) 555-3456",
       license: "CDL-B",
       status: "on-trip",
@@ -170,7 +170,7 @@ export default function FleetDashboard() {
     },
     {
       id: "driver-4",
-      name: "Michael Brown",
+      name: "Mike B.",
       phone: "(970) 555-4567",
       license: "CDL-B",
       status: "on-trip",
@@ -180,7 +180,7 @@ export default function FleetDashboard() {
     },
     {
       id: "driver-5",
-      name: "Emily Rodriguez",
+      name: "Emma R.",
       phone: "(970) 555-5678",
       license: "CDL-B",
       status: "on-trip",
@@ -190,7 +190,7 @@ export default function FleetDashboard() {
     },
     {
       id: "driver-6",
-      name: "David Nguyen",
+      name: "Dan N.",
       phone: "(970) 555-6789",
       license: "Class C",
       status: "available",
@@ -200,7 +200,7 @@ export default function FleetDashboard() {
     },
     {
       id: "driver-7",
-      name: "Lisa Thompson",
+      name: "Lisa T.",
       phone: "(970) 555-7890",
       license: "CDL-B",
       status: "available",
@@ -210,7 +210,7 @@ export default function FleetDashboard() {
     },
     {
       id: "driver-8",
-      name: "Carlos Martinez",
+      name: "Chris M.",
       phone: "(970) 555-8901",
       license: "CDL-B",
       status: "off-duty",
@@ -220,11 +220,11 @@ export default function FleetDashboard() {
     },
   ])
 
-  // Vehicles - Sunshine Rides fleet
+  // Vehicles - Mountain Express fleet
   const [vehicles, setVehicles] = useState<Vehicle[]>([
     {
       id: "vehicle-1",
-      name: "Sunshine Van 01",
+      name: "Express Van 01",
       type: "van",
       licensePlate: "CO-SUN-001",
       status: "active",
@@ -238,7 +238,7 @@ export default function FleetDashboard() {
     },
     {
       id: "vehicle-2",
-      name: "Sunshine Van 02",
+      name: "Express Van 02",
       type: "van",
       licensePlate: "CO-SUN-002",
       status: "active",
@@ -252,7 +252,7 @@ export default function FleetDashboard() {
     },
     {
       id: "vehicle-3",
-      name: "Sunshine Van 03",
+      name: "Express Van 03",
       type: "van",
       licensePlate: "CO-SUN-003",
       status: "active",
@@ -266,7 +266,7 @@ export default function FleetDashboard() {
     },
     {
       id: "vehicle-4",
-      name: "Sunshine Van 04",
+      name: "Express Van 04",
       type: "van",
       licensePlate: "CO-SUN-004",
       status: "active",
@@ -280,7 +280,7 @@ export default function FleetDashboard() {
     },
     {
       id: "vehicle-5",
-      name: "Sunshine Sedan 01",
+      name: "Express Sedan 01",
       type: "sedan",
       licensePlate: "CO-SUN-005",
       status: "maintenance",
@@ -293,7 +293,7 @@ export default function FleetDashboard() {
     },
     {
       id: "vehicle-6",
-      name: "Sunshine Sedan 02",
+      name: "Express Sedan 02",
       type: "sedan",
       licensePlate: "CO-SUN-006",
       status: "idle",
@@ -307,7 +307,7 @@ export default function FleetDashboard() {
     },
     {
       id: "vehicle-7",
-      name: "Sunshine Accessible 01",
+      name: "Express Accessible 01",
       type: "accessible",
       licensePlate: "CO-SUN-007",
       status: "active",
@@ -321,7 +321,7 @@ export default function FleetDashboard() {
     },
     {
       id: "vehicle-8",
-      name: "Sunshine Accessible 02",
+      name: "Express Accessible 02",
       type: "accessible",
       licensePlate: "CO-SUN-008",
       status: "idle",
@@ -340,9 +340,9 @@ export default function FleetDashboard() {
     {
       id: "trip-1",
       vehicleId: "vehicle-1",
-      vehicleName: "Sunshine Van 01",
+      vehicleName: "Express Van 01",
       driverId: "driver-1",
-      driverName: "Maria Garcia",
+      driverName: "Alex M.",
       startLocation: "Grand Junction Airport",
       endLocation: "Telluride Mountain Village",
       startTime: Date.now() - 3600000,
@@ -353,9 +353,9 @@ export default function FleetDashboard() {
     {
       id: "trip-2",
       vehicleId: "vehicle-2",
-      vehicleName: "Sunshine Van 02",
+      vehicleName: "Express Van 02",
       driverId: "driver-2",
-      driverName: "James Wilson",
+      driverName: "Jordan W.",
       startLocation: "Montrose Regional Airport",
       endLocation: "Black Canyon Resort",
       startTime: Date.now() - 7200000,
@@ -366,9 +366,9 @@ export default function FleetDashboard() {
     {
       id: "trip-3",
       vehicleId: "vehicle-3",
-      vehicleName: "Sunshine Van 03",
+      vehicleName: "Express Van 03",
       driverId: "driver-3",
-      driverName: "Sarah Chen",
+      driverName: "Sam C.",
       startLocation: "Telluride Ski Resort",
       endLocation: "Mountain Village Plaza",
       startTime: Date.now() - 1800000,
@@ -379,9 +379,9 @@ export default function FleetDashboard() {
     {
       id: "trip-4",
       vehicleId: "vehicle-4",
-      vehicleName: "Sunshine Van 04",
+      vehicleName: "Express Van 04",
       driverId: "driver-4",
-      driverName: "Michael Brown",
+      driverName: "Mike B.",
       startLocation: "Vail Village",
       endLocation: "Denver International Airport",
       startTime: Date.now() - 14400000,
@@ -393,9 +393,9 @@ export default function FleetDashboard() {
     {
       id: "trip-5",
       vehicleId: "vehicle-7",
-      vehicleName: "Sunshine Accessible 01",
+      vehicleName: "Express Accessible 01",
       driverId: "driver-5",
-      driverName: "Emily Rodriguez",
+      driverName: "Emma R.",
       startLocation: "Grand Junction Medical Center",
       endLocation: "Mesa County Senior Center",
       startTime: Date.now() - 5400000,
@@ -410,7 +410,7 @@ export default function FleetDashboard() {
     {
       id: "maint-1",
       vehicleId: "vehicle-5",
-      vehicleName: "Sunshine Sedan 01",
+      vehicleName: "Express Sedan 01",
       type: "repair",
       scheduledDate: Date.now() - 86400000,
       status: "overdue",
@@ -420,7 +420,7 @@ export default function FleetDashboard() {
     {
       id: "maint-2",
       vehicleId: "vehicle-1",
-      vehicleName: "Sunshine Van 01",
+      vehicleName: "Express Van 01",
       type: "oil-change",
       scheduledDate: Date.now() + 172800000,
       status: "scheduled",
@@ -430,7 +430,7 @@ export default function FleetDashboard() {
     {
       id: "maint-3",
       vehicleId: "vehicle-2",
-      vehicleName: "Sunshine Van 02",
+      vehicleName: "Express Van 02",
       type: "tire-rotation",
       scheduledDate: Date.now() + 432000000,
       status: "scheduled",
@@ -440,7 +440,7 @@ export default function FleetDashboard() {
     {
       id: "maint-4",
       vehicleId: "vehicle-8",
-      vehicleName: "Sunshine Accessible 02",
+      vehicleName: "Express Accessible 02",
       type: "inspection",
       scheduledDate: Date.now() - 259200000,
       status: "overdue",
@@ -450,7 +450,7 @@ export default function FleetDashboard() {
     {
       id: "maint-5",
       vehicleId: "vehicle-3",
-      vehicleName: "Sunshine Van 03",
+      vehicleName: "Express Van 03",
       type: "brake-service",
       scheduledDate: Date.now() + 604800000,
       status: "scheduled",
@@ -460,7 +460,7 @@ export default function FleetDashboard() {
     {
       id: "maint-6",
       vehicleId: "vehicle-4",
-      vehicleName: "Sunshine Van 04",
+      vehicleName: "Express Van 04",
       type: "oil-change",
       scheduledDate: Date.now() - 604800000,
       status: "completed",
@@ -474,7 +474,7 @@ export default function FleetDashboard() {
     {
       id: "alert-1",
       vehicleId: "vehicle-4",
-      vehicleName: "Sunshine Van 04",
+      vehicleName: "Express Van 04",
       type: "speeding",
       message: "Vehicle exceeded 65 mph on I-70 mountain corridor",
       timestamp: Date.now() - 1800000,
@@ -484,7 +484,7 @@ export default function FleetDashboard() {
     {
       id: "alert-2",
       vehicleId: "vehicle-5",
-      vehicleName: "Sunshine Sedan 01",
+      vehicleName: "Express Sedan 01",
       type: "maintenance",
       message: "Overdue for transmission service",
       timestamp: Date.now() - 86400000,
@@ -494,7 +494,7 @@ export default function FleetDashboard() {
     {
       id: "alert-3",
       vehicleId: "vehicle-2",
-      vehicleName: "Sunshine Van 02",
+      vehicleName: "Express Van 02",
       type: "fuel-low",
       message: "Fuel level at 45% - recommend refuel in Montrose",
       timestamp: Date.now() - 3600000,
@@ -504,7 +504,7 @@ export default function FleetDashboard() {
     {
       id: "alert-4",
       vehicleId: "vehicle-3",
-      vehicleName: "Sunshine Van 03",
+      vehicleName: "Express Van 03",
       type: "geofence",
       message: "Entering Telluride mountain zone",
       timestamp: Date.now() - 7200000,
@@ -514,7 +514,7 @@ export default function FleetDashboard() {
     {
       id: "alert-5",
       vehicleId: "vehicle-1",
-      vehicleName: "Sunshine Van 01",
+      vehicleName: "Express Van 01",
       type: "harsh-braking",
       message: "Harsh braking event on Highway 145",
       timestamp: Date.now() - 900000,
@@ -524,7 +524,7 @@ export default function FleetDashboard() {
     {
       id: "alert-6",
       vehicleId: "vehicle-8",
-      vehicleName: "Sunshine Accessible 02",
+      vehicleName: "Express Accessible 02",
       type: "maintenance",
       message: "Wheelchair lift inspection overdue",
       timestamp: Date.now() - 259200000,
@@ -546,12 +546,12 @@ export default function FleetDashboard() {
 
   // Utilization Data
   const [utilizationData] = useState([
-    { name: "Sunshine Van 01", utilization: 87, trips: 42, miles: 1250 },
-    { name: "Sunshine Van 02", utilization: 72, trips: 38, miles: 890 },
-    { name: "Sunshine Van 03", utilization: 81, trips: 45, miles: 1120 },
-    { name: "Sunshine Van 04", utilization: 78, trips: 36, miles: 1080 },
-    { name: "Sunshine Sedan 01", utilization: 12, trips: 5, miles: 180 },
-    { name: "Sunshine Sedan 02", utilization: 65, trips: 28, miles: 420 },
+    { name: "Express Van 01", utilization: 87, trips: 42, miles: 1250 },
+    { name: "Express Van 02", utilization: 72, trips: 38, miles: 890 },
+    { name: "Express Van 03", utilization: 81, trips: 45, miles: 1120 },
+    { name: "Express Van 04", utilization: 78, trips: 36, miles: 1080 },
+    { name: "Express Sedan 01", utilization: 12, trips: 5, miles: 180 },
+    { name: "Express Sedan 02", utilization: 65, trips: 28, miles: 420 },
     { name: "Accessible 01", utilization: 68, trips: 32, miles: 680 },
     { name: "Accessible 02", utilization: 45, trips: 22, miles: 310 },
   ])
@@ -695,7 +695,7 @@ export default function FleetDashboard() {
         >
           <div>
             <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              Sunshine Rides Fleet
+              Mountain Express Fleet
             </h1>
             <p className="text-muted-foreground mt-2">
               Real-time vehicle tracking across Colorado&apos;s Western Slope
