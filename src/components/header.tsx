@@ -16,13 +16,13 @@ import { ThemeToggle } from "@/components/theme-toggle";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#testimonials", label: "Reviews" },
+  { href: "/#pricing", label: "Pricing" },
+  { href: "/#testimonials", label: "Reviews" },
   { href: "/contact", label: "Contact" },
 ];
 
 const dashboardLinks = [
-  { href: "/dashboard/fleet", label: "Fleet" },
+  { href: "/fleet", label: "Fleet" },
   { href: "/dashboard/tracking", label: "Tracking" },
   { href: "/dashboard/support", label: "Support" },
 ];
@@ -77,7 +77,7 @@ export function Header() {
           </a>
           <ThemeToggle />
           <Button asChild>
-            <Link href="#book">Book a Ride</Link>
+            <Link href="/contact">Book a Ride</Link>
           </Button>
         </div>
 
@@ -140,7 +140,7 @@ export function Header() {
                   <span>970-777-7777</span>
                 </a>
                 <Button asChild className="mt-4 w-full" size="lg">
-                  <Link href="#book" onClick={() => setIsOpen(false)}>
+                  <Link href="/contact" onClick={() => setIsOpen(false)}>
                     Book a Ride
                   </Link>
                 </Button>
