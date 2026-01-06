@@ -57,6 +57,10 @@ const CHART_COLORS = {
   danger: "#ef4444",       // Red
   muted: "#6b7280",        // Gray
   border: "#374151",       // Border gray
+  // Tooltip colors
+  tooltipBg: "#1f2937",    // Dark background
+  tooltipBorder: "#374151", // Border
+  tooltipText: "#f9fafb",  // Light text
 }
 
 // TypeScript Interfaces
@@ -1389,14 +1393,14 @@ export default function FleetDashboard() {
                       />
                       <Tooltip
                         contentStyle={{
-                          backgroundColor: "hsl(var(--popover))",
-                          border: "1px solid hsl(var(--border))",
+                          backgroundColor: CHART_COLORS.tooltipBg,
+                          border: `1px solid ${CHART_COLORS.tooltipBorder}`,
                           borderRadius: "8px",
-                          color: "hsl(var(--popover-foreground))",
+                          color: CHART_COLORS.tooltipText,
                         }}
-                        labelStyle={{ color: "hsl(var(--popover-foreground))" }}
-                        itemStyle={{ color: "hsl(var(--popover-foreground))" }}
-                        cursor={{ fill: "hsl(var(--muted) / 0.3)" }}
+                        labelStyle={{ color: CHART_COLORS.tooltipText }}
+                        itemStyle={{ color: CHART_COLORS.tooltipText }}
+                        cursor={{ fill: `${CHART_COLORS.muted}4d` }}
                       />
                       <Bar
                         dataKey="gallons"
@@ -1426,13 +1430,13 @@ export default function FleetDashboard() {
                       />
                       <Tooltip
                         contentStyle={{
-                          backgroundColor: "hsl(var(--popover))",
-                          border: "1px solid hsl(var(--border))",
+                          backgroundColor: CHART_COLORS.tooltipBg,
+                          border: `1px solid ${CHART_COLORS.tooltipBorder}`,
                           borderRadius: "8px",
-                          color: "hsl(var(--popover-foreground))",
+                          color: CHART_COLORS.tooltipText,
                         }}
-                        labelStyle={{ color: "hsl(var(--popover-foreground))" }}
-                        itemStyle={{ color: "hsl(var(--popover-foreground))" }}
+                        labelStyle={{ color: CHART_COLORS.tooltipText }}
+                        itemStyle={{ color: CHART_COLORS.tooltipText }}
                         formatter={(value) => [`$${Number(value).toFixed(2)}`, "Cost"]}
                       />
                       <Area
@@ -1470,15 +1474,15 @@ export default function FleetDashboard() {
                     />
                     <Tooltip
                       contentStyle={{
-                        backgroundColor: "hsl(var(--popover))",
-                        border: "1px solid hsl(var(--border))",
+                        backgroundColor: CHART_COLORS.tooltipBg,
+                        border: `1px solid ${CHART_COLORS.tooltipBorder}`,
                         borderRadius: "8px",
-                        color: "hsl(var(--popover-foreground))",
+                        color: CHART_COLORS.tooltipText,
                       }}
-                      labelStyle={{ color: "hsl(var(--popover-foreground))" }}
-                      itemStyle={{ color: "hsl(var(--popover-foreground))" }}
+                      labelStyle={{ color: CHART_COLORS.tooltipText }}
+                      itemStyle={{ color: CHART_COLORS.tooltipText }}
                       formatter={(value) => [`${value}%`, "Utilization"]}
-                      cursor={{ fill: "hsl(var(--muted) / 0.3)" }}
+                      cursor={{ fill: `${CHART_COLORS.muted}4d` }}
                     />
                     <Bar dataKey="utilization" radius={[0, 4, 4, 0]}>
                       {utilizationData.map((entry, index) => (
