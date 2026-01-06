@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Accessibility,
   Stethoscope,
@@ -6,6 +8,7 @@ import {
   Clock,
   UserCheck,
 } from "lucide-react";
+import { AnimatedSection, AnimatedItem } from "@/components/animated-section";
 
 const features = [
   {
@@ -50,7 +53,7 @@ export function Features() {
   return (
     <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Why Choose Sunshine Rides?
           </h2>
@@ -58,24 +61,28 @@ export function Features() {
             Colorado's trusted transportation partner. Professional service,
             accessible vehicles, and a commitment to getting you there safely.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature) => (
-            <div
+          {features.map((feature, index) => (
+            <AnimatedItem
               key={feature.title}
-              className="group bg-card rounded-xl border p-6 shadow-sm hover:shadow-md transition-shadow"
+              index={index}
+              staggerDelay={100}
+              animation="fade-in-up"
             >
-              <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10">
-                <feature.icon className="w-6 h-6 text-primary" />
+              <div className="group bg-card rounded-xl border p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 motion-reduce:transform-none h-full">
+                <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-lg bg-primary/10 transition-transform duration-300 group-hover:scale-110 motion-reduce:transform-none">
+                  <feature.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
+            </AnimatedItem>
           ))}
         </div>
       </div>
