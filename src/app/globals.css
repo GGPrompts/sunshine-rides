@@ -402,3 +402,27 @@
     transform: none;
   }
 }
+
+/* ============================================
+   GLASS MORPHISM STYLES
+   For fleet dashboard and modern UI elements
+   ============================================ */
+
+.glass {
+  background: oklch(1 0 0 / 60%);
+  backdrop-filter: blur(12px);
+  border: 1px solid oklch(0 0 0 / 10%);
+}
+
+.dark .glass {
+  background: oklch(0.2 0.02 250 / 60%);
+  border: 1px solid oklch(1 0 0 / 10%);
+}
+
+.glass-dark {
+  background: oklch(0.95 0.01 90);
+}
+
+.dark .glass-dark {
+  background: oklch(0.16 0.02 250);
+}
