@@ -15,10 +15,15 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "#services", label: "Services" },
-  { href: "#fleet", label: "Fleet" },
+  { href: "#features", label: "Services" },
   { href: "#pricing", label: "Pricing" },
-  { href: "#contact", label: "Contact" },
+  { href: "#testimonials", label: "Reviews" },
+];
+
+const dashboardLinks = [
+  { href: "/dashboard/fleet", label: "Fleet" },
+  { href: "/dashboard/tracking", label: "Tracking" },
+  { href: "/dashboard/support", label: "Support" },
 ];
 
 export function Header() {
@@ -40,6 +45,16 @@ export function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden items-center gap-6 md:flex">
           {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <span className="text-muted-foreground/50">|</span>
+          {dashboardLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
@@ -94,6 +109,18 @@ export function Header() {
               </SheetHeader>
               <nav className="mt-8 flex flex-col gap-4">
                 {navLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+                <hr className="my-2" />
+                <span className="text-sm font-medium text-muted-foreground">Dashboards</span>
+                {dashboardLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
