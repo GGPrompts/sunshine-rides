@@ -18,6 +18,7 @@ const navLinks = [
   { href: "/services", label: "Services" },
   { href: "#pricing", label: "Pricing" },
   { href: "#testimonials", label: "Reviews" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const dashboardLinks = [
