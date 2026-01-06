@@ -25,23 +25,32 @@ export function AnimatedSection({
 }: AnimatedSectionProps) {
   const { ref, isInView } = useInView<HTMLDivElement>();
 
-  const animationClass = {
-    "fade-in-up": "animate-fade-in-up",
-    "fade-in": "animate-fade-in",
-    "slide-in-left": "animate-slide-in-left",
-    "slide-in-right": "animate-slide-in-right",
-    "scale-in": "animate-scale-in",
+  // Subtle transform-based animations that don't use opacity-0 initial state
+  const baseStyles = "transition-all duration-700 ease-out";
+
+  const animationStyles = {
+    "fade-in-up": isInView
+      ? "opacity-100 translate-y-0"
+      : "opacity-90 translate-y-4",
+    "fade-in": isInView
+      ? "opacity-100"
+      : "opacity-90",
+    "slide-in-left": isInView
+      ? "opacity-100 translate-x-0"
+      : "opacity-90 -translate-x-4",
+    "slide-in-right": isInView
+      ? "opacity-100 translate-x-0"
+      : "opacity-90 translate-x-4",
+    "scale-in": isInView
+      ? "opacity-100 scale-100"
+      : "opacity-90 scale-[0.98]",
   }[animation];
 
   return (
     <div
       ref={ref}
-      className={cn(
-        "transition-opacity",
-        isInView ? animationClass : "opacity-0",
-        className
-      )}
-      style={{ animationDelay: delay ? `${delay}ms` : undefined }}
+      className={cn(baseStyles, animationStyles, className)}
+      style={{ transitionDelay: delay ? `${delay}ms` : undefined }}
     >
       {children}
     </div>
@@ -65,23 +74,31 @@ export function AnimatedItem({
 }: AnimatedItemProps) {
   const { ref, isInView } = useInView<HTMLDivElement>();
 
-  const animationClass = {
-    "fade-in-up": "animate-fade-in-up",
-    "fade-in": "animate-fade-in",
-    "slide-in-left": "animate-slide-in-left",
-    "slide-in-right": "animate-slide-in-right",
-    "scale-in": "animate-scale-in",
+  const baseStyles = "transition-all duration-500 ease-out";
+
+  const animationStyles = {
+    "fade-in-up": isInView
+      ? "opacity-100 translate-y-0"
+      : "opacity-90 translate-y-4",
+    "fade-in": isInView
+      ? "opacity-100"
+      : "opacity-90",
+    "slide-in-left": isInView
+      ? "opacity-100 translate-x-0"
+      : "opacity-90 -translate-x-4",
+    "slide-in-right": isInView
+      ? "opacity-100 translate-x-0"
+      : "opacity-90 translate-x-4",
+    "scale-in": isInView
+      ? "opacity-100 scale-100"
+      : "opacity-90 scale-[0.98]",
   }[animation];
 
   return (
     <div
       ref={ref}
-      className={cn(
-        "transition-opacity",
-        isInView ? animationClass : "opacity-0",
-        className
-      )}
-      style={{ animationDelay: `${index * staggerDelay}ms` }}
+      className={cn(baseStyles, animationStyles, className)}
+      style={{ transitionDelay: `${index * staggerDelay}ms` }}
     >
       {children}
     </div>
