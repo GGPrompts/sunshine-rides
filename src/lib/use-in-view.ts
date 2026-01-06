@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 interface UseInViewOptions {
   threshold?: number;
@@ -15,6 +15,19 @@ export function useInView<T extends HTMLElement = HTMLDivElement>({
 }: UseInViewOptions = {}) {
   const ref = useRef<T>(null);
   const [isInView, setIsInView] = useState(false);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  // Check if element is visible on mount to prevent flicker
+  const checkInitialVisibility = useCallback(() => {
+    const element = ref.current;
+    if (!element) return false;
+
+    const rect = element.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    // Element is visible if it's in the viewport
+    return rect.top < windowHeight && rect.bottom > 0;
+  }, []);
 
   useEffect(() => {
     const element = ref.current;
@@ -28,6 +41,14 @@ export function useInView<T extends HTMLElement = HTMLDivElement>({
     // If user prefers reduced motion, show content immediately
     if (prefersReducedMotion) {
       setIsInView(true);
+      setHasAnimated(true);
+      return;
+    }
+
+    // Check if already visible on mount - skip animation to prevent flicker
+    if (checkInitialVisibility() && !hasAnimated) {
+      setIsInView(true);
+      setHasAnimated(true);
       return;
     }
 
@@ -35,10 +56,11 @@ export function useInView<T extends HTMLElement = HTMLDivElement>({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsInView(true);
+          setHasAnimated(true);
           if (triggerOnce) {
             observer.unobserve(element);
           }
-        } else if (!triggerOnce) {
+        } else if (!triggerOnce && hasAnimated) {
           setIsInView(false);
         }
       },
@@ -50,7 +72,7 @@ export function useInView<T extends HTMLElement = HTMLDivElement>({
     return () => {
       observer.unobserve(element);
     };
-  }, [threshold, rootMargin, triggerOnce]);
+  }, [threshold, rootMargin, triggerOnce, checkInitialVisibility, hasAnimated]);
 
   return { ref, isInView };
 }
