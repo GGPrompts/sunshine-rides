@@ -38,7 +38,7 @@ export function Hero() {
           <AnimatedSection animation="fade-in" delay={100}>
             <Badge
               variant="outline"
-              className="mb-6 border-primary/50 bg-primary/10 text-primary-foreground backdrop-blur-sm"
+              className="mb-6 border-primary/50 bg-primary/20 text-white backdrop-blur-sm"
             >
               <MapPin className="mr-1 size-3" />
               Colorado&apos;s Premier Transportation Service
