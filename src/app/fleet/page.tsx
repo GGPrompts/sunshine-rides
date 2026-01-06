@@ -48,6 +48,17 @@ import {
 } from "recharts"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
+// Chart colors - Recharts needs actual color values, not CSS variables
+const CHART_COLORS = {
+  primary: "#f59e0b",      // Sunshine orange
+  secondary: "#3b82f6",    // Blue
+  success: "#22c55e",      // Green
+  warning: "#eab308",      // Yellow
+  danger: "#ef4444",       // Red
+  muted: "#6b7280",        // Gray
+  border: "#374151",       // Border gray
+}
+
 // TypeScript Interfaces
 interface Driver {
   id: string
@@ -1366,15 +1377,15 @@ export default function FleetDashboard() {
                   </h3>
                   <ResponsiveContainer width="100%" height={300}>
                     <BarChart data={fuelHistory}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border) / 0.2)" />
+                      <CartesianGrid strokeDasharray="3 3" stroke={`${CHART_COLORS.border}33`} />
                       <XAxis
                         dataKey="date"
-                        stroke="hsl(var(--muted-foreground))"
-                        tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                        stroke={CHART_COLORS.muted}
+                        tick={{ fill: CHART_COLORS.muted, fontSize: 12 }}
                       />
                       <YAxis
-                        stroke="hsl(var(--muted-foreground))"
-                        tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                        stroke={CHART_COLORS.muted}
+                        tick={{ fill: CHART_COLORS.muted, fontSize: 12 }}
                       />
                       <Tooltip
                         contentStyle={{
@@ -1389,7 +1400,7 @@ export default function FleetDashboard() {
                       />
                       <Bar
                         dataKey="gallons"
-                        fill="hsl(var(--primary))"
+                        fill={CHART_COLORS.primary}
                         radius={[4, 4, 0, 0]}
                         name="Gallons"
                       />
@@ -1402,15 +1413,15 @@ export default function FleetDashboard() {
                   <h3 className="text-lg font-semibold text-foreground mb-6">Weekly Fuel Costs</h3>
                   <ResponsiveContainer width="100%" height={300}>
                     <AreaChart data={fuelHistory}>
-                      <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border) / 0.2)" />
+                      <CartesianGrid strokeDasharray="3 3" stroke={`${CHART_COLORS.border}33`} />
                       <XAxis
                         dataKey="date"
-                        stroke="hsl(var(--muted-foreground))"
-                        tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                        stroke={CHART_COLORS.muted}
+                        tick={{ fill: CHART_COLORS.muted, fontSize: 12 }}
                       />
                       <YAxis
-                        stroke="hsl(var(--muted-foreground))"
-                        tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                        stroke={CHART_COLORS.muted}
+                        tick={{ fill: CHART_COLORS.muted, fontSize: 12 }}
                         tickFormatter={(value) => `$${value}`}
                       />
                       <Tooltip
@@ -1427,8 +1438,8 @@ export default function FleetDashboard() {
                       <Area
                         type="monotone"
                         dataKey="cost"
-                        stroke="hsl(var(--secondary))"
-                        fill="hsl(var(--secondary) / 0.2)"
+                        stroke={CHART_COLORS.secondary}
+                        fill={`${CHART_COLORS.secondary}33`}
                         strokeWidth={2}
                         name="Cost"
                       />
@@ -1442,19 +1453,19 @@ export default function FleetDashboard() {
                 <h3 className="text-lg font-semibold text-foreground mb-6">Fleet Utilization</h3>
                 <ResponsiveContainer width="100%" height={300}>
                   <BarChart data={utilizationData} layout="vertical">
-                    <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border) / 0.2)" />
+                    <CartesianGrid strokeDasharray="3 3" stroke={`${CHART_COLORS.border}33`} />
                     <XAxis
                       type="number"
-                      stroke="hsl(var(--muted-foreground))"
-                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                      stroke={CHART_COLORS.muted}
+                      tick={{ fill: CHART_COLORS.muted, fontSize: 12 }}
                       domain={[0, 100]}
                       tickFormatter={(value) => `${value}%`}
                     />
                     <YAxis
                       type="category"
                       dataKey="name"
-                      stroke="hsl(var(--muted-foreground))"
-                      tick={{ fill: "hsl(var(--muted-foreground))", fontSize: 12 }}
+                      stroke={CHART_COLORS.muted}
+                      tick={{ fill: CHART_COLORS.muted, fontSize: 12 }}
                       width={130}
                     />
                     <Tooltip
@@ -1475,10 +1486,10 @@ export default function FleetDashboard() {
                           key={`cell-${index}`}
                           fill={
                             entry.utilization >= 70
-                              ? "hsl(var(--primary))"
+                              ? CHART_COLORS.primary
                               : entry.utilization >= 40
-                              ? "hsl(var(--secondary))"
-                              : "hsl(var(--destructive))"
+                              ? CHART_COLORS.secondary
+                              : CHART_COLORS.danger
                           }
                         />
                       ))}
