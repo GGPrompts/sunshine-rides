@@ -64,10 +64,10 @@ export function Header() {
         </div>
 
         {/* Mobile Menu */}
-        <div className="flex items-center gap-2 md:hidden">
+        <div className="flex items-center gap-1 md:hidden">
           <a
             href="tel:970-777-7777"
-            className="flex size-9 items-center justify-center rounded-md text-foreground hover:bg-accent"
+            className="flex size-11 items-center justify-center rounded-md text-foreground hover:bg-accent"
           >
             <Phone className="size-5" />
             <span className="sr-only">Call 970-777-7777</span>
@@ -89,21 +89,21 @@ export function Header() {
                   </span>
                 </SheetTitle>
               </SheetHeader>
-              <nav className="mt-8 flex flex-col gap-4">
+              <nav className="mt-8 flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsOpen(false)}
-                    className="text-lg font-medium text-foreground transition-colors hover:text-primary"
+                    className="flex min-h-[44px] items-center text-lg font-medium text-foreground transition-colors hover:text-primary"
                   >
                     {link.label}
                   </Link>
                 ))}
-                <hr className="my-2" />
+                <hr className="my-3" />
                 <a
                   href="tel:970-777-7777"
-                  className="flex items-center gap-2 text-lg font-medium text-foreground"
+                  className="flex min-h-[44px] items-center gap-2 text-lg font-medium text-foreground"
                 >
                   <Phone className="size-5" />
                   <span>970-777-7777</span>
