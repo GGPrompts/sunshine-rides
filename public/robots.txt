@@ -1,0 +1,15 @@
+# Sunshine Rides - Robots.txt
+# https://sunshinerides.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://sunshinerides.com/sitemap.xml
+
+# Crawl-delay for polite crawlers
+Crawl-delay: 1
+
+# Disallow admin/dashboard pages from indexing
+Disallow: /dashboard/
+Disallow: /api/
