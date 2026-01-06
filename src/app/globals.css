@@ -6,7 +6,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -25,6 +25,13 @@
   --color-input: var(--input);
   --color-border: var(--border);
   --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -44,75 +51,168 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+  /* Sunshine Rides brand color shortcuts */
+  --color-sunshine-orange: var(--sunshine-orange);
+  --color-sunshine-orange-dark: var(--sunshine-orange-dark);
+  --color-sunshine-cream: var(--sunshine-cream);
+  --color-sunshine-navy: var(--sunshine-navy);
 }
+
+/* ============================================
+   SUNSHINE RIDES BRAND DESIGN SYSTEM
+   Primary: Orange #F7941D (from logo)
+   Secondary: Dark Navy/Black
+   Accent: Warm Cream/White
+   ============================================ */
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+
+  /* Base colors */
+  --background: oklch(0.995 0.002 90);     /* Warm white */
+  --foreground: oklch(0.18 0.02 250);      /* Dark navy text */
+
+  /* Card/Surface */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.18 0.02 250);
+
+  /* Popover */
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --popover-foreground: oklch(0.18 0.02 250);
+
+  /* Primary: Sunshine Orange #F7941D */
+  --primary: oklch(0.74 0.165 55);
+  --primary-foreground: oklch(1 0 0);
+
+  /* Secondary: Dark Navy */
+  --secondary: oklch(0.22 0.03 250);
+  --secondary-foreground: oklch(0.98 0 0);
+
+  /* Muted */
+  --muted: oklch(0.96 0.01 90);
+  --muted-foreground: oklch(0.45 0.02 250);
+
+  /* Accent: Warm Cream */
+  --accent: oklch(0.97 0.02 85);
+  --accent-foreground: oklch(0.18 0.02 250);
+
+  /* Destructive (Red) */
+  --destructive: oklch(0.58 0.22 27);
+  --destructive-foreground: oklch(1 0 0);
+
+  /* Success (Green) */
+  --success: oklch(0.55 0.15 145);
+  --success-foreground: oklch(1 0 0);
+
+  /* Warning (Amber) */
+  --warning: oklch(0.78 0.15 75);
+  --warning-foreground: oklch(0.18 0.02 250);
+
+  /* Info (Blue) */
+  --info: oklch(0.55 0.18 250);
+  --info-foreground: oklch(1 0 0);
+
+  /* Borders and inputs */
+  --border: oklch(0.90 0.01 90);
+  --input: oklch(0.90 0.01 90);
+  --ring: oklch(0.74 0.165 55);           /* Orange ring for focus states */
+
+  /* Chart colors for dashboards */
+  --chart-1: oklch(0.74 0.165 55);        /* Orange - primary metric */
+  --chart-2: oklch(0.55 0.18 250);        /* Blue */
+  --chart-3: oklch(0.55 0.15 145);        /* Green */
+  --chart-4: oklch(0.60 0.20 300);        /* Purple */
+  --chart-5: oklch(0.65 0.20 15);         /* Rose */
+
+  /* Sidebar */
+  --sidebar: oklch(0.985 0.005 90);
+  --sidebar-foreground: oklch(0.18 0.02 250);
+  --sidebar-primary: oklch(0.74 0.165 55);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.97 0.02 85);
+  --sidebar-accent-foreground: oklch(0.18 0.02 250);
+  --sidebar-border: oklch(0.90 0.01 90);
+  --sidebar-ring: oklch(0.74 0.165 55);
+
+  /* Sunshine Rides brand shortcuts */
+  --sunshine-orange: oklch(0.74 0.165 55);      /* #F7941D */
+  --sunshine-orange-dark: oklch(0.62 0.18 50);  /* Darker orange for hover */
+  --sunshine-cream: oklch(0.97 0.02 85);        /* Warm cream */
+  --sunshine-navy: oklch(0.22 0.03 250);        /* Dark navy */
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  /* Base colors */
+  --background: oklch(0.16 0.02 250);     /* Dark navy background */
+  --foreground: oklch(0.96 0.01 85);      /* Warm light text */
+
+  /* Card/Surface */
+  --card: oklch(0.20 0.02 250);
+  --card-foreground: oklch(0.96 0.01 85);
+
+  /* Popover */
+  --popover: oklch(0.20 0.02 250);
+  --popover-foreground: oklch(0.96 0.01 85);
+
+  /* Primary: Brighter Orange for dark mode */
+  --primary: oklch(0.78 0.18 55);
+  --primary-foreground: oklch(0.16 0.02 250);
+
+  /* Secondary: Lighter navy */
+  --secondary: oklch(0.28 0.025 250);
+  --secondary-foreground: oklch(0.96 0.01 85);
+
+  /* Muted */
+  --muted: oklch(0.25 0.02 250);
+  --muted-foreground: oklch(0.65 0.01 90);
+
+  /* Accent: Warm dark accent */
+  --accent: oklch(0.30 0.04 55);
+  --accent-foreground: oklch(0.96 0.01 85);
+
+  /* Destructive */
+  --destructive: oklch(0.65 0.20 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  /* Success */
+  --success: oklch(0.60 0.15 145);
+  --success-foreground: oklch(0.16 0.02 250);
+
+  /* Warning */
+  --warning: oklch(0.80 0.15 75);
+  --warning-foreground: oklch(0.16 0.02 250);
+
+  /* Info */
+  --info: oklch(0.60 0.18 250);
+  --info-foreground: oklch(0.16 0.02 250);
+
+  /* Borders and inputs */
+  --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --ring: oklch(0.78 0.18 55);
+
+  /* Chart colors for dark mode */
+  --chart-1: oklch(0.78 0.18 55);         /* Orange - brighter */
+  --chart-2: oklch(0.60 0.18 250);        /* Blue */
+  --chart-3: oklch(0.60 0.15 145);        /* Green */
+  --chart-4: oklch(0.65 0.20 300);        /* Purple */
+  --chart-5: oklch(0.70 0.20 15);         /* Rose */
+
+  /* Sidebar */
+  --sidebar: oklch(0.20 0.02 250);
+  --sidebar-foreground: oklch(0.96 0.01 85);
+  --sidebar-primary: oklch(0.78 0.18 55);
+  --sidebar-primary-foreground: oklch(0.16 0.02 250);
+  --sidebar-accent: oklch(0.28 0.025 250);
+  --sidebar-accent-foreground: oklch(0.96 0.01 85);
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: oklch(0.78 0.18 55);
+
+  /* Brand shortcuts (dark variants) */
+  --sunshine-orange: oklch(0.78 0.18 55);
+  --sunshine-orange-dark: oklch(0.68 0.17 52);
+  --sunshine-cream: oklch(0.30 0.04 55);
+  --sunshine-navy: oklch(0.28 0.025 250);
 }
 
 @layer base {
