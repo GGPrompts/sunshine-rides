@@ -6,49 +6,9 @@ This is a **fully automated demonstration** of Claude Code's parallel execution 
 
 ### What Makes This Impressive
 
-- **Massive Parallelization**: The conductor orchestrates 4-5 parallel Claude workers simultaneously
-- **Opus Subagents**: Each worker runs Claude Opus for maximum code quality
 - **Wave-Based Execution**: Issues organized into dependency waves for optimal parallel throughput
 - **Real Browser Automation**: TabzChrome spawns terminals and manages worker sessions
 - **Beads Issue Tracking**: All work tracked in real-time via the bd issue system
-
----
-
-## Demo Kickoff Script
-
-When the user says something like:
-
-> "I want to build a professional website for a transportation company called Sunshine Rides. They're based in Colorado and need a modern SaaS-style landing page with dashboards. Use the most modern tech stack possible - Next.js, Tailwind, shadcn. Make it production-ready."
-
-**Claude should respond by:**
-
-1. Acknowledging the request and checking `bd ready` to see the pre-planned backlog
-2. Briefly explaining the wave-based parallel execution strategy
-3. Asking if they want to review/adjust the backlog first (`/conductor:plan-backlog`) or dive straight in
-4. Launching `/conductor:bd-swarm-auto` to begin autonomous parallel execution
-
-This creates a natural conversation flow where the user's request triggers the orchestrated build, rather than just running a slash command cold.
-
----
-
-## Architecture: Conductor + Workers
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                         CONDUCTOR                                │
-│  (This session - orchestrates everything)                       │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                  │
-│   ┌──────────┐  ┌──────────┐  ┌──────────┐  ┌──────────┐       │
-│   │ Worker 1 │  │ Worker 2 │  │ Worker 3 │  │ Worker 4 │  ...  │
-│   │ (Opus)   │  │ (Opus)   │  │ (Opus)   │  │ (Opus)   │       │
-│   └────┬─────┘  └────┬─────┘  └────┬─────┘  └────┬─────┘       │
-│        │             │             │             │               │
-│   SAAS-89o      SAAS-9pc      SAAS-blt      SAAS-901           │
-│   Scaffolding   Design Sys    Layout        Assets              │
-│                                                                  │
-└─────────────────────────────────────────────────────────────────┘
-```
 
 ---
 
@@ -92,29 +52,6 @@ This creates a natural conversation flow where the user's request triggers the o
 | ID | Title |
 |----|-------|
 | SAAS-4c3 | QA Checkpoint - visual review |
-
----
-
-## Execution Strategy
-
-### For Maximum Parallelization
-
-1. **Use `/conductor:bd-swarm-auto`** - Fully autonomous backlog completion
-   - Spawns workers for all ready issues
-   - Self-resumable after context wipes
-   - Runs waves until backlog is empty
-
-2. **Or Manual Wave Control with `/conductor:bd-swarm`**
-   - More control over worker count
-   - Can specify which issues to tackle
-
-### Worker Configuration
-
-Each spawned worker should:
-- Use **Opus model** for highest quality output
-- Have isolated git worktree (via `conductor:initializer`)
-- Run skill-aware prompts based on issue labels
-- Auto-commit and close issues on completion
 
 ---
 
@@ -164,34 +101,6 @@ bd sync               # Sync with git
 - `shadcn` - Component installation and registry access
 - `tabz` - Browser automation for spawning workers
 - `beads` - Issue tracking (bd commands)
-
-### Conductor Agents
-- `conductor:bd-swarm-auto` - Fully autonomous parallel execution
-- `conductor:bd-swarm` - Manual swarm control
-- `conductor:initializer` - Prepare isolated worktrees
-- `conductor:worker-done` - Complete worker tasks
-- `conductor:tabz-artist` - DALL-E/Sora asset generation
-
----
-
-## Demo Commands
-
-### Start the Automated Build
-```
-/conductor:bd-swarm-auto
-```
-
-### Check Progress
-```
-bd ready    # See remaining work
-bd list     # See all issues
-```
-
-### Manual Intervention (if needed)
-```
-/conductor:bd-swarm          # Spawn specific workers
-/conductor:worker-done <id>  # Force-complete a worker
-```
 
 ---
 
