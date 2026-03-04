@@ -8,7 +8,7 @@ This is a **fully automated demonstration** of Claude Code's parallel execution 
 
 - **Wave-Based Execution**: Issues organized into dependency waves for optimal parallel throughput
 - **Real Browser Automation**: TabzChrome spawns terminals and manages worker sessions
-- **Beads Issue Tracking**: All work tracked in real-time via the bd issue system
+- **Beads Issue Tracking**: All work tracked in real-time via the ggbd issue system
 
 ---
 
@@ -57,16 +57,16 @@ This is a **fully automated demonstration** of Claude Code's parallel execution 
 
 ## Beads Issue Tracking
 
-This project uses **bd** (beads) for issue tracking.
+This project uses **ggbd** (beads) for issue tracking.
 
 ### Quick Reference
 
 ```bash
-bd ready              # Find available work (no blockers)
-bd show <id>          # View issue details
-bd update <id> --status in_progress  # Claim work
-bd close <id>         # Complete work
-bd sync               # Sync with git
+ggbd ready              # Find available work (no blockers)
+ggbd show <id>          # View issue details
+ggbd update <id> --status in_progress  # Claim work
+ggbd close <id>         # Complete work
+# Supabase auto-syncs (no manual sync needed)
 ```
 
 ### Session Completion Protocol
@@ -79,7 +79,7 @@ bd sync               # Sync with git
 4. **PUSH TO REMOTE** - This is MANDATORY:
    ```bash
    git pull --rebase
-   bd sync
+   # Supabase auto-syncs (no manual sync needed)
    git push
    git status  # MUST show "up to date with origin"
    ```
@@ -100,7 +100,7 @@ bd sync               # Sync with git
 ### MCP Servers
 - `shadcn` - Component installation and registry access
 - `tabz` - Browser automation for spawning workers
-- `beads` - Issue tracking (bd commands)
+- `beads` - Issue tracking (ggbd commands)
 
 ---
 
