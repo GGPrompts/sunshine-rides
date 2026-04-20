@@ -1,11 +1,11 @@
-# Sunshine Rides - Robots.txt
-# https://sunshinerides.com
+# Mountain Express - Robots.txt
+# https://mountain-express.vercel.app
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://sunshinerides.com/sitemap.xml
+Sitemap: https://mountain-express.vercel.app/sitemap.xml
 
 # Crawl-delay for polite crawlers
 Crawl-delay: 1

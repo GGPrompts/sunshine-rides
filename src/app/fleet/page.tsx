@@ -50,7 +50,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 
 // Chart colors - Recharts needs actual color values, not CSS variables
 const CHART_COLORS = {
-  primary: "#f59e0b",      // Sunshine orange
+  primary: "#f59e0b",      // Brand orange
   secondary: "#3b82f6",    // Blue
   success: "#22c55e",      // Green
   warning: "#eab308",      // Yellow

@@ -1,8 +1,8 @@
-# Sunshine Rides - Automated SaaS Build Demo
+# Mountain Express - Automated SaaS Build Demo
 
 ## Demo Overview
 
-This is a **fully automated demonstration** of Claude Code's parallel execution capabilities. The goal: build a complete, production-quality SaaS landing page for "Sunshine Rides" - a Colorado transportation service - in approximately **15 minutes** with minimal human intervention.
+This is a **fully automated demonstration** of Claude Code's parallel execution capabilities. The goal: build a complete, production-quality SaaS landing page for "Mountain Express" - a Colorado transportation service - in approximately **15 minutes** with minimal human intervention.
 
 ### What Makes This Impressive
 
@@ -17,19 +17,19 @@ This is a **fully automated demonstration** of Claude Code's parallel execution 
 ### Wave 0 - Assets (Parallel with Wave 1)
 | ID | Title | Notes |
 |----|-------|-------|
-| SAAS-901 | Generate Sunshine Rides branded assets via TabzArtist | DALL-E image generation |
+| SAAS-901 | Generate Mountain Express branded assets via TabzArtist | DALL-E image generation |
 
 ### Wave 1 - Foundation (3 parallel workers)
 | ID | Title | Blocks |
 |----|-------|--------|
 | SAAS-89o | Project scaffolding - Next.js + Tailwind + shadcn/ui | 9 issues |
-| SAAS-9pc | Design system - Sunshine Rides brand colors | 10 issues |
+| SAAS-9pc | Design system - Mountain Express brand colors | 10 issues |
 | SAAS-blt | Layout shell - RootLayout with providers | 10 issues |
 
 ### Wave 2 - UI Components (batched across 2-3 rounds)
 | ID | Title | Type |
 |----|-------|------|
-| SAAS-irm | Header - Sunshine Rides navigation | ui |
+| SAAS-irm | Header - Mountain Express navigation | ui |
 | SAAS-avw | Hero section - ride booking CTA | ui |
 | SAAS-zz0 | Features grid - service highlights | ui |
 | SAAS-z21 | Pricing section - Ride service tiers | ui |

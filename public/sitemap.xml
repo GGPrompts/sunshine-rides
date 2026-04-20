@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Homepage -->
   <url>
-    <loc>https://sunshinerides.com/</loc>
+    <loc>https://mountain-express.vercel.app/</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,21 +10,21 @@
 
   <!-- Dashboard Pages (lower priority, for authenticated users) -->
   <url>
-    <loc>https://sunshinerides.com/dashboard/fleet</loc>
+    <loc>https://mountain-express.vercel.app/dashboard/fleet</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://sunshinerides.com/dashboard/tracking</loc>
+    <loc>https://mountain-express.vercel.app/dashboard/tracking</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://sunshinerides.com/dashboard/support</loc>
+    <loc>https://mountain-express.vercel.app/dashboard/support</loc>
     <lastmod>2026-01-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
